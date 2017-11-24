@@ -1,2 +1,2 @@
 # SimpleMVC
-A simple MVC template to begin a new PHP project
+A simple MVC template to get started with a new PHP project
