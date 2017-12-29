@@ -7,7 +7,7 @@ class Db {
   public static function getInstance() {
     $host = 'localhost';
     $user = 'root';
-    $pass = '';
+    $pass = 'root';
     $base = 'simplemvc';
     if (!isset(self::$instance)) {
       $pdo_options = array(

@@ -1,8 +1,8 @@
-<p>Here is a list of all posts:</p>
+<h2>Voici une liste de posts :</h2>
 
 <?php foreach($posts as $post) { ?>
   <p>
-    <?php echo $post->getTitle(); ?>
-    <a href='?controller=post&action=show&id=<?php echo $post->getId(); ?>'>See content</a>
+    <i><?php echo $post->getTitle(); ?> </i>
+    <a href='?controller=post&action=show&id=<?php echo $post->getId(); ?>'>Voir plus</a>
   </p>
 <?php } ?>
