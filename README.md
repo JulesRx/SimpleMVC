@@ -1,47 +1,49 @@
 # SimpleMVC
-Un template PHP pour commencer un nouveau projet avec l'architecture MVC. Ce template est adapté pour les novices en PHP.
+A PHP template to start a new project with the MVC architecture. This template is suitable for novices in PHP.
 
-## Documentation
-### Structure de base
-Les pages sont structurées de telle manière :
-- 'index.php' appelle 'dao.php' qui contient les paramètres du projet, défini les variables 'controller' et 'action', puis appelle 'layout.php'.
-- 'layout.php' représente la structure HTML de chaque page, c.a.d. la head de la page, le body, le footer. Puis appelle 'routes.php', ce qui donne le contenu de la page.
-- 'routes.php' appelle les contrôleurs, qui renvoient les vues et renvoient les vues correspondantes.
+## Base structure
+The pages are structured in such a way:
+- 'index.php' calls 'dao.php' which contains the project parameters, sets the 'controller' and 'action' variables, and then calls 'routes.php'.
+- 'routes.php' calls the controllers, which return the corresponding views, like the header, the page content and the footer.
 
-### Ajouter un contrôleur
-Pour ajouter un contrôleur, il faut créer un contrôleur dans le dossier controllers nommé 'nomducontoleur_controller.php', créer les vues associées dans le dossier views et indexer ce contrôleur dans 'routes.php'.
-Par exemple, on veut créer un contrôleur afin d'afficher une liste d'utilisateurs, ainsi que leur détails. On va donc créer le contrôleur 'utilisateur_controlleur.php' :
+## Add a controller
+To add a controller, you need to create one in the controllers folder named 'name_controller.php', create the associated views in the views folder, and index that controller in 'routes.php'.
+For example, we want to create a controller to display a list of users, as well as their details. We will create the controller 'user_controller.php' :
 ```php
 <?php
-class UtilisateurController {
-  public function index() { // Action de base du contrôleur
+class UserController {
+  public function index() { // Controller basic action
 
-    require_once('views/utilisateur/index.php');
+    require_once('views/template/header.php');
+    require_once('views/user/index.php');
+    require_once('views/template/footer.php');
   }
 
   public function details() {
 
-    require_once('views/utilisateur/details.php');
+    require_once('views/template/header.php');
+    require_once('views/user/details.php');
+    require_once('views/template/footer.php');
   }
 }
 ?>
 ```
-Après avoir créé notre contrôleur, il faut l'indexer dans 'routes.php'... :
+After creating our controller, we need to index it in 'routes.php' ...:
 ```php
 switch($controller) {
-    case 'utilisateur':
-    // On peut créer une classe utilisateur avec le contôleur
-    require_once('models/dto/utilisateur.php');
-    $controller = new UtilisateurController();
+    case 'user':
+    // You can create a user class along with the controller
+    require_once('models/dto/user.php');
+    $controller = new UserController();
     break;
   }
 ```
-... et indiquer ses différentes actions :
+... and indicate its different actions :
 ```php
 $controllers = array(
-  'utilisateur' => ['index', 'details']
+  'user' => ['index', 'details']
 );
 ```
-Ensuite, il faut créer les vues associées à ce contrôleur, c.a.d. dans le dossier 'views/utilisateur', les vues 'index.php' et 'details.php'.
+Next, create the views associated with this controller, i.e. in the 'views/user/' folder, the 'index.php' and 'details.php' views.
 
-Il ne reste plus qu'a remplir les contrôleurs pour démarrer le projet. :sparkles:
+All that remains is to fill the controllers to start the project. :sparkles:

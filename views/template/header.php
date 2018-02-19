@@ -12,12 +12,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/simplemvc.css">
 
-  <title>SimpleMVC</title>
+  <?php if (isset($title)): ?>
+    <title><?= $GLOBALS['site_title'] ?> - <?= $title ?></title>
+  <?php else: ?>
+    <title><?= $GLOBALS['site_title'] ?></title>
+  <?php endif; ?>
+
 </head>
 <body>
 
   <nav id="myNav" class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="?action=home">SimpleMVC</a>
+    <a class="navbar-brand" href="<?= $GLOBALS['base_url']; ?>"><?= $GLOBALS['site_title'] ?></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsedNav" aria-controls="collapsedNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,15 +32,11 @@
         <li class="nav-item">
           <a class="nav-link" href="?controller=post&action=index">Posts</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="?controller=pages&action=about">About</a>
+        </li>
       </ul>
     </div>
   </nav>
 
   <div class="container">
-
-    <?php require_once('routes.php'); ?>
-
-  </div>
-
-</body>
-</html>
