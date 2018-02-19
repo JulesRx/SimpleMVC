@@ -36,7 +36,7 @@ switch($controller) {
     require_once('models/dto/user.php');
     $controller = new UserController();
     break;
-  }
+}
 ```
 ... and indicate its different actions :
 ```php
