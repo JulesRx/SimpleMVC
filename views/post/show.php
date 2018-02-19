@@ -1,7 +1,7 @@
-<small>Voici le post demandé :</small>
+<small>This is the requested post :</small>
 
-<h2><i><?php echo $post->getTitle(); ?></i></h2>
+<h2><i><?= $post->getTitle(); ?></i></h2>
 
-<p>par <?php echo $post->getAuthor(); ?></p>
+<p>by <?= $post->getAuthor(); ?></p>
 
-<?php echo $post->getContent(); ?>
+<?= $post->getContent(); ?>

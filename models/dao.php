@@ -43,7 +43,6 @@ class Db {
   public function insert($sql){
     if ( $this -> exec($sql) > 0 ){
       return 1;
-      //$this->lastInsertId();
     }
     return false;
   }

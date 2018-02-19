@@ -1,4 +1,6 @@
 <?php
+require_once('config/config.php');
+
 require_once('models/dao.php');
 
 if (isset($_GET['controller']) && isset($_GET['action'])) {
@@ -10,5 +12,5 @@ else {
   $action     = 'home';
 }
 
-require_once('views/layout.php');
+require_once('routes.php');
 ?>
