@@ -3,12 +3,12 @@ A PHP template to start a new project with the MVC architecture. This template i
 
 ## Base structure
 The pages are structured in such a way:
-- 'index.php' calls 'dao.php' which contains the project parameters, sets the 'controller' and 'action' variables, and then calls 'routes.php'.
-- 'routes.php' calls the controllers, which return the corresponding views, like the header, the page content and the footer.
+- `index.php` calls `dao.php` which contains the project parameters, sets the `controller` and `action` variables, and then calls `routes.php`.
+- `routes.php` calls the controllers, which return the corresponding views, like the header, the page content and the footer.
 
 ## Add a controller
-To add a controller, you need to create one in the controllers folder named 'name_controller.php', create the associated views in the views folder, and index that controller in 'routes.php'.
-For example, we want to create a controller to display a list of users, as well as their details. We will create the controller 'user_controller.php' :
+To add a controller, you need to create one in the controllers folder named `example_controller.php`, create the associated views in the `views/example/` folder, and index that controller in `routes.php`.
+For example, we want to create a controller to display a list of users, as well as their details. We will create the controller `user_controller.php` :
 ```php
 <?php
 class UserController {
@@ -28,7 +28,7 @@ class UserController {
 }
 ?>
 ```
-After creating our controller, we need to index it in 'routes.php' ...:
+After creating our controller, we need to index it in `routes.php` ...:
 ```php
 switch($controller) {
     case 'user':
@@ -44,6 +44,6 @@ $controllers = array(
   'user' => ['index', 'details']
 );
 ```
-Next, create the views associated with this controller, i.e. in the 'views/user/' folder, the 'index.php' and 'details.php' views.
+Next, create the views associated with this controller, i.e. in the `views/user/` folder, the `index.php` and `details.php` views.
 
 All that remains is to fill the controllers to start the project. :sparkles:
