@@ -1,0 +1,11 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+#RewriteBase /
+
+
+RewriteRule ^(about)/?$ ?controller=pages&action=$1 [NC,L]
+
+RewriteRule ^([A-Za-z0-9-]+)/?$ ?controller=$1&action=index [NC,L]
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ ?controller=$1&action=$2 [NC,L]
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ ?controller=$1&action=$2&id=$3 [NC,L]

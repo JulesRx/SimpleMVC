@@ -1,7 +1,7 @@
 <?php
 // Defining global variables
 // BaseURL
-$GLOBALS['base_url'] = "http://simplemvc:8888/";
+$GLOBALS['base_url'] = "http://simplemvc/";
 
 //SiteTitle
 $GLOBALS['site_title'] = "SimpleMVC";

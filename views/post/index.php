@@ -3,6 +3,6 @@
 <?php foreach ($posts as $post): ?>
   <p>
     <i><?= $post->getTitle(); ?> </i>
-    <a href='?controller=post&action=show&id=<?= $post->getId(); ?>'>See more</a>
+    <a href="post/show/<?=$post->getId() ?>">See more</a>
   </p>
 <?php endforeach; ?>

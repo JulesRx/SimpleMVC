@@ -34,10 +34,10 @@
     <div class="collapse navbar-collapse" id="collapsedNav">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="?controller=post&action=index">Posts</a>
+          <a class="nav-link" href="post">Posts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="?controller=pages&action=about">About</a>
+          <a class="nav-link" href="about">About</a>
         </li>
       </ul>
     </div>
