@@ -12,5 +12,5 @@ else {
   $action     = 'home';
 }
 
-require_once('routes.php');
+require_once('config/routes.php');
 ?>
