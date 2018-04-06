@@ -28,17 +28,7 @@ class UserController {
 }
 ?>
 ```
-After creating our controller, we need to index it in `routes.php` ...:
-```php
-switch($controller) {
-    case 'user':
-    // You can create a user class along with the controller
-    require_once('models/dto/user.php');
-    $controller = new UserController();
-    break;
-}
-```
-... and indicate its different actions :
+After creating our controller, we need to index it in `config/routes.php` and indicate its different actions :
 ```php
 $controllers = array(
   'user' => ['index', 'details']
