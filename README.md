@@ -1,5 +1,6 @@
 # SimpleMVC
-A PHP template to start a new project with the MVC architecture. This template is suitable for novices in PHP.
+A PHP template to start a new project with the MVC architecture. This template is suitable for novices in PHP.  
+**SimpleMVC is a student project.**
 
 ## Base structure
 The pages are structured in such a way:
